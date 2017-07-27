@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en us">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Guessing Game</title>
+</head>
+
+<body>
+	
+	<div id="game">
+	<p>Guess what letter the computer is thinking of.</p>
+	<p></p>
+	<p></p>
+	<p>wins: 0</p>
+	<p>losses: 0</p>
+
+	</div>
+
+<script type="text/javascript">
+		
+var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var wins = 0;
+var losses = 0;
+var guessList = [];
+var livesLeft = 9;
+var computerGuess = computerChoices[Math.floor(Math.random() * 26)];
+
+
+document.onkeyup = function(event) {
+	var userGuess = event.key;
+
+
+	if (userGuess == computerGuess) {
+		wins++;
+		guessList.push(userGuess);
+
+	}
+
+	else {
+		losses++;
+		guessList.push(userGuess);
+		lives = livesLeft - losses;
+
+			if (lives == 0)	{
+			location.reload();
+			}
+		}
+
+
+      // for (var i = 0; i < guessList.length; i++) {
+      //   // Logs the animal at index position i to the console. This code is executed each we go through the loop.
+      //   console.log(guessList[i]);
+      // }
+
+var html = 
+	"<p>Guess what letter the computer is thinking of.</p>" +
+	"<p>wins: " + wins + "</p>" +
+	"<p>losses: " + losses + "</p>" +
+	"<p>You chose: " + userGuess + "</p>" +
+	"<p>The computer chose: " + computerGuess + "</p>" +
+	"<p>You have guessed " + guessList.length + " times </p>" +
+	"<p>You have guessed " + userGuess += " times </p>" +
+	"<p>You have " + lives + " lives left.</p>";
+
+	document.querySelector ("#game").innerHTML = html;
+	}
+
+</script>
+
+
+
+</body>
+</html>
