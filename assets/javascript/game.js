@@ -19,7 +19,7 @@ document.onkeyup = function(keyPressed) {
 	if (userGuess == computerGuess) {
 		wins++;
 		console.log("You won a game!");
-		alert("You won a game!")
+		alert("That's right! You guessed '" + computerGuess + "' correctly. You won a game!")
 		computerGuess = computerChoices[Math.floor(Math.random() * 26)]
 		console.log(computerGuess);
 		document.getElementById("lettersGuessedID").innerHTML = "";
@@ -35,7 +35,7 @@ document.onkeyup = function(keyPressed) {
 		losses++;
 		guesses=9;
 		console.log("You lost a game.")
-		alert("You lost a game.")
+		alert("The answer was '" + computerGuess + "'. You lost a game.")
 		computerGuess = computerChoices[Math.floor(Math.random() * 26)];
 		console.log(computerGuess);
 		document.getElementById("lettersGuessedID").innerHTML = "";
