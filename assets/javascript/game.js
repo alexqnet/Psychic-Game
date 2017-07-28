@@ -22,6 +22,7 @@ document.onkeyup = function(keyPressed) {
 		alert("That's right! You guessed '" + computerGuess + "' correctly. You won a game!")
 		computerGuess = computerChoices[Math.floor(Math.random() * 26)]
 		console.log(computerGuess);
+		guesses=9;
 		document.getElementById("lettersGuessedID").innerHTML = "";
 	}
 
