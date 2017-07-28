@@ -44,9 +44,9 @@ document.onkeyup = function(keyPressed) {
 
 
 var html = 
-	"<p>Wins: " + wins + "</p>" +
-	"<p>Losses: " + losses + "</p>" +
-	"<p>Guesses left in this round: " + guesses + "</p>";
+	"<p><b>Wins:</b> " + wins + "</p>" +
+	"<p><b>Losses:</b> " + losses + "</p>" +
+	"<p><b>Guesses left in this round:</b> " + guesses + "</p>";
 
 	document.querySelector ("#game").innerHTML = html;
 
